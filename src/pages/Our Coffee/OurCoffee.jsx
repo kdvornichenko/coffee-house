@@ -96,8 +96,8 @@ const OurCoffee = () => {
 		setCards(
 			cardsData.filter(item => {
 				return (
-					item.name.toLowerCase().indexOf(e.target.value) > -1 ||
-					item.country.toLowerCase().indexOf(e.target.value) > -1
+					item.name.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1 ||
+					item.country.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1
 				)
 			})
 		)
