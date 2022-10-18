@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.0bea93a3.css",
-    "main.js": "./static/js/main.7e3286aa.js",
-    "static/media/Paper-bg.jpg": "./static/media/Paper-bg.e3f5093ea8367ad771ef.jpg",
-    "static/media/Main-bg.jpg": "./static/media/Main-bg.ad9c54d6db833396a159.jpg",
-    "static/media/Our-coffee-bg.jpg": "./static/media/Our-coffee-bg.e8094fc787f35d4856eb.jpg",
-    "static/media/Lavazza-rossa.png": "./static/media/Lavazza-rossa.51de457d40af895afac4.png",
-    "static/media/Our-coffee-about.png": "./static/media/Our-coffee-about.ee0892191aafb3f7ea98.png",
-    "static/media/Hausbrandt-Gourmet-Columbus.png": "./static/media/Hausbrandt-Gourmet-Columbus.5f2ec75d7bd48f827ee5.png",
-    "static/media/Solimo-coffee-decaf.png": "./static/media/Solimo-coffee-decaf.ffd10faceafa53833582.png",
-    "static/media/Solimo-Coffee-Intense.png": "./static/media/Solimo-Coffee-Intense.7d158bc476831838fca0.png",
-    "static/media/AROMISTICO-Coffee.png": "./static/media/AROMISTICO-Coffee.abb45c1ba257a5364ef1.png",
-    "static/media/Solimo-Coffee.png": "./static/media/Solimo-Coffee.25d5ad4a54bdd9afbde4.png",
-    "static/media/Presto-Coffee.png": "./static/media/Presto-Coffee.7d9f028b14b6f1708735.png",
-    "index.html": "./index.html",
-    "main.0bea93a3.css.map": "./static/css/main.0bea93a3.css.map",
-    "main.7e3286aa.js.map": "./static/js/main.7e3286aa.js.map"
+    "main.css": "/coffee-house/static/css/main.c279abd6.css",
+    "main.js": "/coffee-house/static/js/main.62ca6fdf.js",
+    "static/media/Paper-bg.jpg": "/coffee-house/static/media/Paper-bg.e3f5093ea8367ad771ef.jpg",
+    "static/media/Main-bg.jpg": "/coffee-house/static/media/Main-bg.ad9c54d6db833396a159.jpg",
+    "static/media/Our-coffee-bg.jpg": "/coffee-house/static/media/Our-coffee-bg.e8094fc787f35d4856eb.jpg",
+    "static/media/Lavazza-rossa.png": "/coffee-house/static/media/Lavazza-rossa.51de457d40af895afac4.png",
+    "static/media/Our-coffee-about.png": "/coffee-house/static/media/Our-coffee-about.ee0892191aafb3f7ea98.png",
+    "static/media/Hausbrandt-Gourmet-Columbus.png": "/coffee-house/static/media/Hausbrandt-Gourmet-Columbus.5f2ec75d7bd48f827ee5.png",
+    "static/media/Solimo-coffee-decaf.png": "/coffee-house/static/media/Solimo-coffee-decaf.ffd10faceafa53833582.png",
+    "static/media/Solimo-Coffee-Intense.png": "/coffee-house/static/media/Solimo-Coffee-Intense.7d158bc476831838fca0.png",
+    "static/media/AROMISTICO-Coffee.png": "/coffee-house/static/media/AROMISTICO-Coffee.abb45c1ba257a5364ef1.png",
+    "static/media/Solimo-Coffee.png": "/coffee-house/static/media/Solimo-Coffee.25d5ad4a54bdd9afbde4.png",
+    "static/media/Presto-Coffee.png": "/coffee-house/static/media/Presto-Coffee.7d9f028b14b6f1708735.png",
+    "index.html": "/coffee-house/index.html",
+    "main.c279abd6.css.map": "/coffee-house/static/css/main.c279abd6.css.map",
+    "main.62ca6fdf.js.map": "/coffee-house/static/js/main.62ca6fdf.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bea93a3.css",
-    "static/js/main.7e3286aa.js"
+    "static/css/main.c279abd6.css",
+    "static/js/main.62ca6fdf.js"
   ]
 }
