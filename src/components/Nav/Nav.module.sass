@@ -1,0 +1,19 @@
+.Nav
+	@apply relative
+	&_CoffeeBeans
+		@apply absolute -top-5 -left-8 hidden sm:block
+	&_List
+		@apply list-none flex gap-4 font-normal text-transparent text-xs md:text-base
+	a
+		@apply relative pb-1
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 0
+			height: 2px
+			background-color: var(--color)
+			transition: all 0.2s
+		&:hover::after
+			width: 100%
