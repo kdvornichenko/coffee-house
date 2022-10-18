@@ -1,11 +1,4 @@
-import styles from './App.module.sass'
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	Routes,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Main from '../pages/Main/Main'
 import Header from '../components/Header/Header'
 import OurCoffee from '../pages/Our Coffee/OurCoffee'
@@ -14,7 +7,7 @@ import Footer from '../components/Footer/Footer'
 
 function App() {
 	return (
-		<Router>
+		<Router basename='/coffee-house'>
 			<Header />
 			<Routes>
 				<Route path='/' element={<Main />} />
