@@ -5,11 +5,9 @@ import ourCoffeeAbout from '../../img/Our-coffee-about.png'
 import PagesInfo from '../../components/Pages Info/PagesInfo'
 import Filter from '../../components/Filter/Filter'
 import Card from '../../components/Card/Card'
-import solimoCoffeeDecaf from '../../img/Solimo-coffee-decaf.png'
-import solimoCoffeeIntense from '../../img/Solimo-Coffee-Intense.png'
-import lavazzaRossa from '../../img/Lavazza-rossa.png'
-import hausbrandtGourmet from '../../img/Hausbrandt-Gourmet-Columbus.png'
 import { useState } from 'react'
+import CardModal from '../../components/Card Modal/CardModal'
+import cardsData from '../../components/cardsData'
 
 const OurCoffee = () => {
 	const text = (
@@ -28,41 +26,6 @@ const OurCoffee = () => {
 		</>
 	)
 
-	const cardsData = [
-		{
-			imgUrl: solimoCoffeeDecaf,
-			alt: 'Solimo Coffee Decaffeinated 1kg',
-			name: 'Solimo Coffee Decaffeinated 1kg',
-			price: '14.99$',
-			country: 'Brazil',
-			link: 'solimo-coffee-decaf',
-		},
-		{
-			imgUrl: solimoCoffeeIntense,
-			alt: 'Solimo Coffee Intense 1kg',
-			name: 'Solimo Coffee Intense 1kg',
-			price: '15.99$',
-			country: 'Kenya',
-			link: 'solimo-coffee-intense',
-		},
-		{
-			imgUrl: lavazzaRossa,
-			alt: 'Lavazza Rossa 1kg',
-			name: 'Lavazza Rossa 1kg',
-			price: '10.99$',
-			country: 'Columbia',
-			link: 'lavazza-ross',
-		},
-		{
-			imgUrl: hausbrandtGourmet,
-			alt: 'Hausbrandt Gourmet Columbus 1kg',
-			name: 'Hausbrandt Gourmet Columbus 1kg',
-			price: '12.99$',
-			country: 'Brazil',
-			link: 'hausbrandt-gourmet-columbus',
-		},
-	]
-
 	const buttonsData = [
 		{ name: 'All', filter: false },
 		{ name: 'Brazil', filter: false },
@@ -72,6 +35,7 @@ const OurCoffee = () => {
 
 	const [cards, setCards] = useState(cardsData)
 	const [activeBtn, setActiveBtn] = useState(buttonsData)
+	const [cardModal, setCardModal] = useState()
 
 	const onCardsFilterClick = e => {
 		const attr = e.target.getAttribute('data-label')
@@ -108,6 +72,14 @@ const OurCoffee = () => {
 		)
 	}
 
+	const onCardClick = e => {
+		setCardModal(
+			cardsData.filter(item => {
+				return item.name === e.target.getAttribute('data-name')
+			})
+		)
+	}
+
 	return (
 		<>
 			<div className={styles.OurCoffee}>
@@ -123,9 +95,14 @@ const OurCoffee = () => {
 					onSearchInput={onSearchInput}
 					activeBtn={activeBtn}
 				/>
-				<div className={styles.OurCoffee_Cards}>
-					{cards.length > 0 ? <Card cardsData={cards} /> : 'Empty'}
+				<div className={styles.Cards}>
+					{cards.length > 0 ? (
+						<Card cardsData={cards} onCardClick={onCardClick} />
+					) : (
+						"Ooops... We don't have that kind of coffee"
+					)}
 				</div>
+				{cardModal && <CardModal cardModal={cardModal} />}
 			</div>
 		</>
 	)
