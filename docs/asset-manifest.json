@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coffee-house/static/css/main.c2313c4a.css",
-    "main.js": "/coffee-house/static/js/main.eadfd809.js",
+    "main.css": "/coffee-house/static/css/main.f26cbb01.css",
+    "main.js": "/coffee-house/static/js/main.dbcaefa7.js",
     "static/media/Paper-bg.jpg": "/coffee-house/static/media/Paper-bg.e3f5093ea8367ad771ef.jpg",
     "static/media/Main-bg.jpg": "/coffee-house/static/media/Main-bg.ad9c54d6db833396a159.jpg",
     "static/media/Our-coffee-bg.jpg": "/coffee-house/static/media/Our-coffee-bg.e8094fc787f35d4856eb.jpg",
@@ -16,11 +16,11 @@
     "static/media/Solimo-Coffee.png": "/coffee-house/static/media/Solimo-Coffee.25d5ad4a54bdd9afbde4.png",
     "static/media/Presto-Coffee.png": "/coffee-house/static/media/Presto-Coffee.7d9f028b14b6f1708735.png",
     "index.html": "/coffee-house/index.html",
-    "main.c2313c4a.css.map": "/coffee-house/static/css/main.c2313c4a.css.map",
-    "main.eadfd809.js.map": "/coffee-house/static/js/main.eadfd809.js.map"
+    "main.f26cbb01.css.map": "/coffee-house/static/css/main.f26cbb01.css.map",
+    "main.dbcaefa7.js.map": "/coffee-house/static/js/main.dbcaefa7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2313c4a.css",
-    "static/js/main.eadfd809.js"
+    "static/css/main.f26cbb01.css",
+    "static/js/main.dbcaefa7.js"
   ]
 }
