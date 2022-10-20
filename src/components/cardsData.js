@@ -18,6 +18,8 @@ const cardsData = [
 		imgUrl: solimoCoffeeIntense,
 		alt: 'Solimo Coffee Intense 1kg',
 		name: 'Solimo Coffee Intense 1kg',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum iste pariatur excepturi vitae architecto perferendis accusantium nisi, corrupti quibusdam ducimus rerum animi ipsum velit ad voluptatum quis ratione laudantium fugit?',
 		price: '15.99$',
 		country: 'Kenya',
 		link: 'solimo-coffee-intense',
@@ -26,6 +28,8 @@ const cardsData = [
 		imgUrl: lavazzaRossa,
 		alt: 'Lavazza Rossa 1kg',
 		name: 'Lavazza Rossa 1kg',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum iste pariatur excepturi vitae architecto perferendis accusantium nisi, corrupti quibusdam ducimus rerum animi ipsum velit ad voluptatum quis ratione laudantium fugit?',
 		price: '10.99$',
 		country: 'Columbia',
 		link: 'lavazza-ross',
@@ -34,6 +38,8 @@ const cardsData = [
 		imgUrl: hausbrandtGourmet,
 		alt: 'Hausbrandt Gourmet Columbus 1kg',
 		name: 'Hausbrandt Gourmet Columbus 1kg',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum iste pariatur excepturi vitae architecto perferendis accusantium nisi, corrupti quibusdam ducimus rerum animi ipsum velit ad voluptatum quis ratione laudantium fugit?',
 		price: '12.99$',
 		country: 'Brazil',
 		link: 'hausbrandt-gourmet-columbus',

@@ -5,7 +5,7 @@ import ourCoffeeAbout from '../../img/Our-coffee-about.png'
 import PagesInfo from '../../components/Pages Info/PagesInfo'
 import Filter from '../../components/Filter/Filter'
 import Card from '../../components/Card/Card'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import CardModal from '../../components/Card Modal/CardModal'
 import cardsData from '../../components/cardsData'
 
@@ -35,7 +35,8 @@ const OurCoffee = () => {
 
 	const [cards, setCards] = useState(cardsData)
 	const [activeBtn, setActiveBtn] = useState(buttonsData)
-	const [cardModal, setCardModal] = useState()
+	const [cardModalData, setCardModalData] = useState(cardsData)
+	const [showCardModal, isShowCardModal] = useState(false)
 
 	const onCardsFilterClick = e => {
 		const attr = e.target.getAttribute('data-label')
@@ -73,11 +74,13 @@ const OurCoffee = () => {
 	}
 
 	const onCardClick = e => {
-		setCardModal(
+		setCardModalData(
 			cardsData.filter(item => {
-				return item.name === e.target.getAttribute('data-name')
+				return item.name === e.target.closest('[data-name]').dataset.name
 			})
 		)
+
+		isShowCardModal(true)
 	}
 
 	return (
@@ -102,7 +105,12 @@ const OurCoffee = () => {
 						"Ooops... We don't have that kind of coffee"
 					)}
 				</div>
-				{cardModal && <CardModal cardModal={cardModal} />}
+				{showCardModal && (
+					<CardModal
+						isShowCardModal={isShowCardModal}
+						cardModalData={cardModalData}
+					/>
+				)}
 			</div>
 		</>
 	)
