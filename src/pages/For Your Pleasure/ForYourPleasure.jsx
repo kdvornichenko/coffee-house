@@ -5,8 +5,13 @@ import pleasureAbout from '../../img/For-your-pleasure-about.png'
 import PagesInfo from '../../components/Pages Info/PagesInfo'
 import Card from '../../components/Card/Card'
 import cardsData from '../../components/cardsData'
+import { useState } from 'react'
+import CardModal from '../../components/Card Modal/CardModal'
 
 const ForYourPleasure = () => {
+	const [cardModalData, setCardModalData] = useState(cardsData)
+	const [showCardModal, isShowCardModal] = useState(false)
+
 	const text = (
 		<>
 			Extremity sweetness difficult behaviour he of. On disposal of as landlord
@@ -22,6 +27,17 @@ const ForYourPleasure = () => {
 			<br /> is song that held help face.
 		</>
 	)
+
+	const onCardClick = e => {
+		setCardModalData(
+			cardsData.filter(item => {
+				return item.name === e.target.closest('[data-name]').dataset.name
+			})
+		)
+
+		isShowCardModal(true)
+	}
+
 	return (
 		<div className={styles.Pleasure}>
 			<PagesHeading heading='Our Coffee' bgImg={pleasureBg} />
@@ -32,8 +48,14 @@ const ForYourPleasure = () => {
 				text={text}
 			/>
 			<div className={styles.Cards}>
-				<Card cardsData={cardsData} />
+				<Card onCardClick={onCardClick} cardsData={cardsData} />
 			</div>
+			{showCardModal && (
+				<CardModal
+					isShowCardModal={isShowCardModal}
+					cardModalData={cardModalData}
+				/>
+			)}
 		</div>
 	)
 }

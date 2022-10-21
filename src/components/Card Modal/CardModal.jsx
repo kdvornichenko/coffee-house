@@ -2,10 +2,12 @@ import CoffeeBeans from '../Coffee Beans/CoffeeBeans'
 import styles from './CardModal.module.sass'
 
 const CardModal = ({ cardModalData, isShowCardModal }) => {
+	let id = 0
+
 	return cardModalData.map(
 		({ imgUrl, alt, name, description, country, price }) => {
 			return (
-				<div className={styles.CardModal_BgBlur} key={name}>
+				<div className={styles.CardModal_BgBlur} key={(id = id + 1)}>
 					<div className={styles.CardModal}>
 						<div
 							className={styles.CardModal_Close}

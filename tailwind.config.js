@@ -18,6 +18,9 @@ module.exports = {
 			maxWidth: {
 				147: '590px',
 			},
+			maxHeight: {
+				540: '540px',
+			},
 		},
 		fontSize: {
 			40: '40px',

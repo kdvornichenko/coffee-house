@@ -1,15 +1,15 @@
 .CardModal
-	@apply fixed top-0 bottom-0 left-0 right-0 max-w-2xl h-3/4 m-auto p-5 bg-white shadow-lg rounded-md
+	@apply fixed top-0 bottom-0 left-0 right-0 max-w-2xl h-auto max-h-540 m-auto p-5 bg-white shadow-lg rounded-md overflow-auto sm:overflow-hidden
 	&_BgBlur
 		@apply fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-40 z-10
 	&_Close
 		@apply before:absolute before:top-1/2 before:w-4 before:h-0.5 before:bg-gray-600 before:rotate-45 after:absolute after:top-1/2 after:w-4 after:h-0.5 after:bg-gray-600 after:-rotate-45 transition-all w-5 h-5 ml-auto relative hover:scale-125 cursor-pointer
 	&_Wrap
-		@apply flex h-full
+		@apply sm:flex h-full
 	&_ImgWrap
-		@apply flex w-1/2
+		@apply flex	m-auto w-32 sm:w-52
 		img
-			@apply m-auto h-1/2
+			@apply m-auto
 	&_Info
 		@apply text-left mt-8 w-full
 		&_Heading
@@ -22,4 +22,4 @@
 		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.20)
 		&:hover
 			box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15)
-		@apply px-4 py-2 mt-6 rounded-md transition-all duration-500 hover:bg-slate-100
+		@apply px-4 py-2 my-6 rounded-md transition-all duration-500 hover:bg-slate-100

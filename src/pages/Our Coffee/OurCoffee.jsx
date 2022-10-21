@@ -5,9 +5,9 @@ import ourCoffeeAbout from '../../img/Our-coffee-about.png'
 import PagesInfo from '../../components/Pages Info/PagesInfo'
 import Filter from '../../components/Filter/Filter'
 import Card from '../../components/Card/Card'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import CardModal from '../../components/Card Modal/CardModal'
-import cardsData from '../../components/cardsData'
+import ourCoffeeData from '../../components/ourCoffeeData'
 
 const OurCoffee = () => {
 	const text = (
@@ -31,22 +31,23 @@ const OurCoffee = () => {
 		{ name: 'Brazil', filter: false },
 		{ name: 'Kenya', filter: false },
 		{ name: 'Columbia', filter: false },
+		{ name: 'Arabica', filter: false },
 	]
 
-	const [cards, setCards] = useState(cardsData)
+	const [cards, setCards] = useState(ourCoffeeData)
 	const [activeBtn, setActiveBtn] = useState(buttonsData)
-	const [cardModalData, setCardModalData] = useState(cardsData)
+	const [cardModalData, setCardModalData] = useState(ourCoffeeData)
 	const [showCardModal, isShowCardModal] = useState(false)
 
 	const onCardsFilterClick = e => {
 		const attr = e.target.getAttribute('data-label')
 		setCards(
-			cardsData.filter(item => {
+			ourCoffeeData.filter(item => {
 				if (item.country === attr) {
 					return item
 				}
 				if (attr === 'All') {
-					return cardsData
+					return ourCoffeeData
 				}
 			})
 		)
@@ -59,7 +60,7 @@ const OurCoffee = () => {
 
 	const onSearchInput = e => {
 		setCards(
-			cardsData.filter(item => {
+			ourCoffeeData.filter(item => {
 				return (
 					item.name.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1 ||
 					item.country.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1
@@ -75,7 +76,7 @@ const OurCoffee = () => {
 
 	const onCardClick = e => {
 		setCardModalData(
-			cardsData.filter(item => {
+			ourCoffeeData.filter(item => {
 				return item.name === e.target.closest('[data-name]').dataset.name
 			})
 		)
@@ -100,7 +101,7 @@ const OurCoffee = () => {
 				/>
 				<div className={styles.Cards}>
 					{cards.length > 0 ? (
-						<Card cardsData={cards} onCardClick={onCardClick} />
+						<Card ourCoffeeData={cards} onCardClick={onCardClick} />
 					) : (
 						"Ooops... We don't have that kind of coffee"
 					)}
