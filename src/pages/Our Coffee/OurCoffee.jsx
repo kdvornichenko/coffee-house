@@ -39,28 +39,29 @@ const OurCoffee = () => {
 	const [cardModalData, setCardModalData] = useState(ourCoffeeData)
 	const [showCardModal, isShowCardModal] = useState(false)
 
-	const onCardsFilterClick = e => {
+	const onCardsFilterClick = (e) => {
 		const attr = e.target.getAttribute('data-label')
 		setCards(
-			ourCoffeeData.filter(item => {
+			ourCoffeeData.filter((item) => {
 				if (item.country === attr) {
 					return item
 				}
 				if (attr === 'All') {
 					return ourCoffeeData
 				}
+				return null
 			})
 		)
 		setActiveBtn(
-			buttonsData.map(item => {
+			buttonsData.map((item) => {
 				return item.name === attr ? { ...item, filter: true } : item
 			})
 		)
 	}
 
-	const onSearchInput = e => {
+	const onSearchInput = (e) => {
 		setCards(
-			ourCoffeeData.filter(item => {
+			ourCoffeeData.filter((item) => {
 				return (
 					item.name.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1 ||
 					item.country.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1
@@ -68,15 +69,15 @@ const OurCoffee = () => {
 			})
 		)
 		setActiveBtn(
-			buttonsData.map(item => {
+			buttonsData.map((item) => {
 				return { ...item, filter: false }
 			})
 		)
 	}
 
-	const onCardClick = e => {
+	const onCardClick = (e) => {
 		setCardModalData(
-			ourCoffeeData.filter(item => {
+			ourCoffeeData.filter((item) => {
 				return item.name === e.target.closest('[data-name]').dataset.name
 			})
 		)
@@ -87,10 +88,10 @@ const OurCoffee = () => {
 	return (
 		<>
 			<div className={styles.OurCoffee}>
-				<PagesHeading heading='Our Coffee' bgImg={ourCoffeeBg} />
+				<PagesHeading heading="Our Coffee" bgImg={ourCoffeeBg} />
 				<PagesInfo
 					image={ourCoffeeAbout}
-					alt='Our Coffee'
+					alt="Our Coffee"
 					heading={'About our beans'}
 					text={text}
 				/>

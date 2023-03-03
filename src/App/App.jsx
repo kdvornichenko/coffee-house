@@ -7,12 +7,12 @@ import Footer from '../components/Footer/Footer'
 
 function App() {
 	return (
-		<Router basename='/coffee-house'>
+		<Router basename="/">
 			<Header />
 			<Routes>
-				<Route path='/' element={<Main />} />
-				<Route path='/our-coffee' element={<OurCoffee />} />
-				<Route path='/for-your-pleasure' element={<ForYourPleasure />} />
+				<Route path="/" element={<Main />} />
+				<Route path="/our-coffee" element={<OurCoffee />} />
+				<Route path="/for-your-pleasure" element={<ForYourPleasure />} />
 			</Routes>
 			<Footer />
 		</Router>
